@@ -14,5 +14,12 @@ class RecipeCard
     @@all
   end
 
+  def self.hash
+    counted = Hash.new(0)
+    all.each do |card|
+      counted[card.recipe] += 1
+    end
+    counted
+  end
 
 end

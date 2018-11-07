@@ -6,39 +6,42 @@ class User
     @@all << self
   end
 
- def recipe_cards
+  def self.all
+    @@all
+  end
+
+  def recipe_cards
    RecipeCard.all.select { |card| card.user == self}
- end
+  end
 
-def recipes
-  recipes_card.map { |card| card.recipe}
-end
+  def recipes
+    recipe_cards.map { |card| card.recipe}
+  end
 
 
- def add_recipe_card(recipe, date, rating)
+  def add_recipe_card(recipe, date, rating)
    RecipeCard.new(rating, recipe, self, date)
- end
+  end
 
- def declare_allergen(ingredient)
+  def declare_allergen(ingredient)
    Allergen.new(ingredient, self)
- end
+  end
 
- def allergens_helper
+  def allergens_helper
    Allergen.all.select { |allergen| allergen.user == self}
- end
+  end
 
  def allergens
    allergens_helper.map {|allergen| allergen.ingredient}
  end
 
- def top_three_ratings
+ def top_ratings
    recipe_cards.sort_by {|card| card.rating}.reverse
  end
 
  def top_three_recipes
-   top_three_ratings.map {|card| card.recipe}[0..2]
+   top_ratings.map {|card| card.recipe}[0..2]
  end
-
 
  def most_recent_recipe
    recipes.last

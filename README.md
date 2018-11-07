@@ -13,16 +13,16 @@ Build the following methods on the Recipe class
 
 <!-- - `Recipe.all`
 should return all of the recipe instances -->
-- `Recipe.most_popular`
-should return the recipe instance with the highest number of users (the recipe that has the most recipe cards)
-- `Recipe#users`
-should return the user instances who have recipe cards with this recipe
-- `Recipe#ingredients`
-should return all of the ingredients in this recipe
-- `Recipe#allergens`
-should return all of the ingredients in this recipe that are allergens
-- `Recipe#add_ingredients`
-should take an array of ingredient instances as an argument, and associate each of those ingredients with this recipe
+<!-- - `Recipe.most_popular`
+should return the recipe instance with the highest number of users (the recipe that has the most recipe cards) -->
+<!-- - `Recipe#users`
+should return the user instances who have recipe cards with this recipe -->
+<!-- - `Recipe#ingredients`
+should return all of the ingredients in this recipe -->
+<!-- - `Recipe#allergens`
+should return all of the ingredients in this recipe that are allergens -->
+<!-- - `Recipe#add_ingredients`
+should take an array of ingredient instances as an argument, and associate each of those ingredients with this recipe -->
 
 
 ### `User`
@@ -65,20 +65,20 @@ Build the following methods on the Ingredient class
 
 <!-- - `Ingredient.all`
 should return all of the ingredient instances -->
-- `Ingredient.most_common_allergen`
-should return the ingredient instance that the highest number of users are allergic to
+<!-- - `Ingredient.most_common_allergen`
+should return the ingredient instance that the highest number of users are allergic to -->
 
 
 ### `RecipeIngredient`
 RecipeIngredient is the join between an ingredient and a recipe.  This is a has-many-through relationship
 Build the following methods on the RecipeIngredient class
 
-- `RecipeIngredient.all`
-should return all of the RecipeIngredient instances
-- `RecipeIngredient#ingredient`
-should return the ingredient instance
-- `RecipeIngredient#recipe`
-should return the recipe instance
+<!-- - `RecipeIngredient.all`
+should return all of the RecipeIngredient instances -->
+<!-- - `RecipeIngredient#ingredient`
+should return the ingredient instance -->
+<!-- - `RecipeIngredient#recipe`
+should return the recipe instance -->
 
 
 ### `Allergen`

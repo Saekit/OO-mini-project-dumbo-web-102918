@@ -11,8 +11,14 @@ class Ingredient
     @@all
   end
 
-  # def self.most_common_allergen
-  #
-  # end
+  def allergen
+    Allergen.all.select { |aller| aller.ingredient == self }
+  end
+
+  def self.most_common_allergen
+    Allergen.hash.sort_by {|k,v| v}.last[0]
+  end
+
+
 
 end
